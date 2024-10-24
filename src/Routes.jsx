@@ -1,13 +1,13 @@
+// src/routes.js
 import React from 'react';
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/Header';
 import Servicios from './components/Servicios/Servicios';
 import Footer from './components/Footer';
-import HomeStore from './components/Tienda/HomeStore'; // Importa HomeStore desde la ubicación correcta
-import Cart from './components/Tienda/Cart'; // Importa Cart desde la ubicación correcta
-import Login from './components/Login/Login'; // Importa Cart desde la ubicación correcta
-
+import HomeStore from './components/Tienda/HomeStore';
+import Cart from './components/Tienda/Cart';
+import Login from './components/Login/Login';
 
 const Root = () => (
   <>
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         element: <Servicios />, // Define la ruta para Servicios
       },
       {
-        path: "Login", // Define la ruta para Cart
+        path: "Login", // Define la ruta para Login
         element: <Login />,
       },
       {

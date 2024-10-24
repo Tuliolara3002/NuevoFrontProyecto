@@ -24,7 +24,7 @@ const Header = () => {
         <Link to="/servicios" className="text-yellow-500 hover:text-white">Servicios</Link>
       </div>
       <div className="flex items-center space-x-5">
-        <Link to="/" className="text-yellow-500 hover:text-white">Inicio</Link>
+        <Link to="/Login" className="text-yellow-500 hover:text-white">Inicio</Link>
         <button className="bg-black text-white px-5 py-2 rounded-md hover:bg-gray-900">Nuestros Planes Aqui</button>
         <Link to="/cart" className="relative">
           <FaCartShopping className="text-2xl text-black-500 hover:text-white" />
