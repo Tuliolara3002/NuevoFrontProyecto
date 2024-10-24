@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import store from './components/Tienda/Store'; // Asegúrate de importar el store desde la ubicación correcta
+import store from './components/Tienda/Store';
 import App from './App';
 import './index.css';
 

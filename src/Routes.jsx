@@ -6,6 +6,8 @@ import Servicios from './components/Servicios/Servicios';
 import Footer from './components/Footer';
 import HomeStore from './components/Tienda/HomeStore'; // Importa HomeStore desde la ubicación correcta
 import Cart from './components/Tienda/Cart'; // Importa Cart desde la ubicación correcta
+import Login from './components/Login/Login'; // Importa Cart desde la ubicación correcta
+
 
 const Root = () => (
   <>
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "servicios",
         element: <Servicios />, // Define la ruta para Servicios
+      },
+      {
+        path: "Login", // Define la ruta para Cart
+        element: <Login />,
       },
       {
         path: "HomeStore", // Define la ruta para HomeStore

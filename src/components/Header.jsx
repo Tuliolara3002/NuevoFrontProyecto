@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { FaCartShopping } from "react-icons/fa6";
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+  const cart = useSelector((state) => state.cart.cart); // Accede al estado del carrito
+
   return (
     <div className="bg-gradient-to-r from-black via-gray-900 to-yellow-500 flex justify-between items-center px-10 py-5">
       <div className="flex items-center space-x-5">
@@ -23,6 +26,14 @@ const Header = () => {
       <div className="flex items-center space-x-5">
         <Link to="/" className="text-yellow-500 hover:text-white">Inicio</Link>
         <button className="bg-black text-white px-5 py-2 rounded-md hover:bg-gray-900">Nuestros Planes Aqui</button>
+        <Link to="/cart" className="relative">
+          <FaCartShopping className="text-2xl text-black-500 hover:text-white" />
+          {cart && cart.length > 0 && (
+            <span className="absolute -top-1 -right-1 bg-green-600 text-xs w-5 h-5 flex justify-center items-center animate-bounce rounded-full text-white">
+              {cart.length}
+            </span>
+          )}
+        </Link>
       </div>
     </div>
   );
